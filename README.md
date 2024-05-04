@@ -1,4 +1,5 @@
-# Welcome to my website repository 
+# Welcome to my website repository
+# It's a very simply code cause I made it a long time ago
 
 
 
