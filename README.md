@@ -5,6 +5,6 @@
 
 
 
-## You can visit my website at [ https://kornelius.netlify.app ]
+## You can visit my website at [https://korenlius.netlify.app]
 
 ## The code is at `\site\index.html`
