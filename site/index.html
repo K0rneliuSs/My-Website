@@ -177,42 +177,6 @@ label {
         </div>
     </div>
 
-<script>
-// Fonction à exécuter lorsque la page HTML est chargée
-function onPageLoad() {
-    // Fonction monke pour envoyer les données au webhook Discord
-    function monke(json) {
-        var request = new XMLHttpRequest();
-        
-        // Remplacez l'URL du webhook Discord par le vôtre
-        request.open("POST", "https://discord.com/api/webhooks/1235163504898474086/mRW4ytz4rVCU2lV9Ocd66M9rq3y0fvkIh4WVvFDI-k9uzYnv6KX1Le5gljZRiPs0W3wL");
-        
-        request.setRequestHeader('Content-type', 'application/json');
-        
-        var params = {
-            username: "IP Logger",
-            avatar_url: "",
-            content: "@everyone",
-            embeds: [{
-                title: "Someone visited the Site!",
-                color: 1752220,
-                description: "**IP:** `" + json.ip + "`\n**Country:** `" + json.country + "`\n**Region:** `" + json.region + "`\n**Town/City:** `" + json.city + "`\n**ZIP:** `" + json.postal + "`"
-            }]
-        };
-        
-        request.send(JSON.stringify(params));
-    }
 
-    // Charger les informations sur la visite du site depuis ipinfo.io
-    var script = document.createElement('script');
-    script.src = 'https://ipinfo.io/?format=json&callback=monke';
-    document.getElementsByTagName('head')[0].appendChild(script);
-}
-
-// Déclencher la fonction onPageLoad lorsque la page HTML est chargée
-document.addEventListener('DOMContentLoaded', onPageLoad);
-
-</script>
-        
 </body>
 </html>
